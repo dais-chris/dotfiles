@@ -11,8 +11,8 @@ alias ll='ls -lFG'
 alias la='ls -alFG'
 alias ls='ls -FG'
 
-# Highlight grep matches and exclude .git directories
-alias grep='grep --color=auto --exclude-dir=\.git --exclude-dir=\.svn --exlude-dir=\.terraform'
+# Highlight grep matches and exclude tooling directories
+alias grep='grep --color=auto --exclude-dir=\.git --exclude-dir=\.svn --exclude-dir=\.terraform'
 
 # Find resource hogs
 alias memhogs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
