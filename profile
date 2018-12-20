@@ -8,7 +8,7 @@ export GRADLE_HOME="$(realpath $(brew --prefix gradle))/libexec"
 export SBT_HOME="$(realpath $(brew --prefix sbt))/libexec"
 
 # Set PATH appropriately
-export PATH="${JAVA_HOME}/bin:/usr/local/opt:$PATH"
+export PATH="${JAVA_HOME}/bin:$PATH"
 
 # Explicitly set our timezone
 export TZ='America/Chicago'
