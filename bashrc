@@ -29,6 +29,11 @@ shopt -s histappend
 # Append commands to history everytime prompt is shown instead of after closing session
 PROMPT_COMMAND='history -a'
 
+# Java Environments
+if [ -x "$(command -v jenv)" ]; then
+	eval "$(jenv init -)";
+fi
+
 # Add aliases
 if [ -f ~/.bash_aliases ]; then
 	source ~/.bash_aliases
