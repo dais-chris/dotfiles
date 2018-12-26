@@ -11,8 +11,8 @@ alias ll='ls -lFG'
 alias la='ls -alFG'
 alias ls='ls -FG'
 
-# Highlight grep matches and exclude tooling directories
-alias grep='grep --color=auto --exclude-dir=\.git --exclude-dir=\.svn --exclude-dir=\.terraform'
+# Set default grep behavior to be case-insensitive, ignore binary files, print line numbers, search recursively, highlight matches and exclude tooling directories and specific file types
+alias grep='grep -iInr --color=auto --exclude-dir=\.{git,terraform} --exclude=\*.{bmp,gif,jpg,jpeg,png,raw,svg,tif,tiff}'
 
 # Find resource hogs
 alias memhogs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
