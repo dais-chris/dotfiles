@@ -27,7 +27,7 @@ alias lsport='sudo /usr/sbin/lsof -i | grep LISTEN' # show all open ports listen
 alias dnsflush='dscacheutil -flushcache' # flush DNS cache
 
 # Brew
-alias brewski='brew update && brew upgrade && brew cleanup && brew doctor'
+alias brewski='brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor && brew cask doctor'
 
 # Git
 alias gitup='find . -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} pull \;'
