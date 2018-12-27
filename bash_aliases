@@ -30,4 +30,4 @@ alias dnsflush='dscacheutil -flushcache' # flush DNS cache
 alias brewski='brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor && brew cask doctor'
 
 # Git
-alias gitup='find . -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} pull \;'
+alias gitup='find . -mindepth 1 -maxdepth 2 -type d -exec test -e "{}/.git" ";" -print -exec git -C {} pull \;'
