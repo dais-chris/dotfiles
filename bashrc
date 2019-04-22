@@ -8,26 +8,20 @@ if [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion
 fi
 
-# Set the PS1 prompt (with colors)
-PS1='\[\e[36;1m\]\h:\[\e[32;1m\]\w$ \[\e[0m\]'
+PS1='\[\e[36;1m\]\h:\[\e[32;1m\]\w$ \[\e[0m\]'	# Set the PS1 prompt with colors
+export CLICOLOR=1				# Add some color to our CLI
 
-# Add some color to our CLI
-export CLICOLOR=1
+export EDITOR=/usr/bin/vim	# Set vim as default editor
+export PAGER=less		# Use less for pager
 
-# Set the default editor
-export EDITOR=/usr/bin/vim
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
-# Avoid successive duplicates in command history
-export HISTCONTROL=ignoredups
-
-# Use less as pager
-export PAGER=less
-
-# Append instead of overwriting commands to the command history file (~/.bash_history)
-shopt -s histappend
-
-# Append commands to history everytime prompt is shown instead of after closing session
-PROMPT_COMMAND='history -a'
+export HISTCONTROL=ignoredups	# No history duplicates
+export HISTSIZE=10000		# Store 10k history entries
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"	# Ignore certain commands in history
+PROMPT_COMMAND='history -a'	# Apply history commands everytime prompt is shown
+shopt -s histappend		# Append instead of overwriting history
 
 # Java Environments
 if [ -x "$(command -v jenv)" ]; then
