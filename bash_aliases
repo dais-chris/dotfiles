@@ -12,7 +12,7 @@ alias la='ls -alFG'
 alias ls='ls -FG'
 
 # Set default grep behavior to be case-insensitive, ignore binary files, print line numbers, search recursively, highlight matches and exclude tooling directories and specific file types
-alias grep='grep -iInr --color=auto --exclude-dir=\.{git,terraform} --exclude=\*.{bmp,gif,jpg,jpeg,png,raw,svg,tif,tiff}'
+alias grep='grep -iInr --color=auto --exclude-dir=\.{git,terraform,idea} --exclude-dir={target} --exclude=\*.{json,xml} --exclude=\*.{bmp,gif,jpg,jpeg,png,raw,svg,tif,tiff}'
 
 # Find resource hogs
 alias memhogs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
