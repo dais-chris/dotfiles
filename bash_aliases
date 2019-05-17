@@ -31,3 +31,8 @@ alias brewski='brew update && brew upgrade && brew cask upgrade && brew cleanup 
 
 # Git
 alias gitup='find . -mindepth 1 -maxdepth 2 -type d -execdir test -d "{}/.git" ";" -print -exec git -C {} pull \;'
+
+# Rust
+alias rust-musl-builder='docker run --rm -it -v "$(pwd)":/home/rust/src ekidd/rust-musl-builder'
+# Use like: rust-musl-builder cargo build --release
+
